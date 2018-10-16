@@ -16,15 +16,34 @@ router.get('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   knex('movies')
     .where('id', req.params.id)
-    .then((rows) => {
-      res.json(rows)
+    .first()
+    .then((row) => {
+      if (!row) {
+        let err = new Error(`ID not found`)
+        err.status = 400
+        throw err
+      } else {
+        res.json(row)
+      }
     })
     .catch((err) => {
       next(err)
     })
 })
+
+// Validates that req.body contains all information for POST and PUT
+function validateRequestBody(req) {
+  if (!req.body.title || !req.body.director || !req.body.year || !req.body.rating) {
+    let err = new Error(`All information required`)
+    err.status = 400
+    throw err
+  }
+}
+
 // CREATE ONE record for this table
 router.post('/', (req, res, next) => {
+  validateRequestBody(req)
+
   knex('movies')
     .insert({
       title: req.body.title,
@@ -40,8 +59,10 @@ router.post('/', (req, res, next) => {
       next(err)
     })
 })
+
 // UPDATE ONE record for this table
 router.put('/:id', (req, res, next) => {
+  validateRequestBody(req)
   knex('movies')
     .where('id', req.params.id)
     .then((data) => {
@@ -69,7 +90,11 @@ router.delete('/:id', function (req, res, next) {
     .where('id', req.params.id)
     .first()
     .then((row) => {
-      if (!row) return next()
+      if (!row) {
+        let err = new Error(`ID not found`)
+        err.status = 400
+        throw err
+      }
       knex('movies')
         .del()
         .where('id', req.params.id)
