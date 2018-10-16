@@ -7,19 +7,36 @@ exports.seed = function (knex, Promise) {
             id: 1,
             title: 'The Shawshank Redemption',
             director: 'Frank Darabont',
-            year: 1994
+            year: 1994,
+            rating: 5
           },
           {
             id: 2,
             title: 'Pulp Fiction',
             director: 'Quentin Tarantino',
-            year: 1994
+            year: 1994,
+            rating: 5
           },
           {
             id: 3,
             title: 'How to Train Your Dragon',
             director: 'Dean DeBlois',
-            year: 2010
+            year: 2010,
+            rating: 5
+          },
+          {
+            id: 4,
+            title: 'Emoji Movie',
+            director: 'Tony Leondis',
+            year: 2017,
+            rating: 3
+          },
+          {
+            id: 5,
+            title: '50 Shades of Grey',
+            director: 'Victor Rasuk',
+            year: 2015,
+            rating: 1
           }
         ])
         .then(function () {
