@@ -3,6 +3,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+let indexRouter = require('./routes/index')
 let moviesRouter = require('./routes/movies')
 
 let app = express();
@@ -15,6 +16,13 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.use(`/`, indexRouter)
 app.use('/movies', moviesRouter)
 
 // catch 404 and forward to error handler
