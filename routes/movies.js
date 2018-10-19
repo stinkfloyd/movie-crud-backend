@@ -60,7 +60,7 @@ router.post('/', validateRequestBody, (req, res, next) => {
       title: req.body.title,
       director: req.body.director,
       year: req.body.year,
-      rating: req.body.rating
+      rating: req.body.rating,
       poster_url: req.body.poster_url
     })
     .returning('*')
@@ -84,7 +84,7 @@ router.put('/:id', isValidID, validateRequestBody, (req, res, next) => {
           title: req.body.title,
           director: req.body.director,
           year: req.body.year,
-          rating: req.body.rating
+          rating: req.body.rating,
           poster_url: req.body.poster_url
         })
         .returning('*')
