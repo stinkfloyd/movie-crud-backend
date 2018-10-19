@@ -6,6 +6,7 @@ exports.up = function (knex, Promise) {
     table.string('director', 255).notNullable().defaultTo('')
     table.integer('year', 4).notNullable().defaultTo(0)
     table.integer('rating', 1).notNullable().defaultTo(3)
+    table.string('poster_url').notNullable.defaultTo('http://placekitten.com/g/200/300')
     table.timestamps(true, true)
   })
 }
