@@ -41,7 +41,6 @@ exports.seed = function (knex, Promise) {
             director: 'Victor Rasuk',
             year: 2015,
             rating: 1,
-            ,
             poster_url: 'http://placekitten.com/g/200/300'
           }
         ])
