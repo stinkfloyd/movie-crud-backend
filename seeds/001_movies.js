@@ -9,6 +9,7 @@ exports.seed = function (knex, Promise) {
             director: 'Frank Darabont',
             year: 1994,
             rating: 5
+            poster_url: 'http://placekitten.com/g/200/300'
           },
           {
             id: 2,
@@ -16,6 +17,7 @@ exports.seed = function (knex, Promise) {
             director: 'Quentin Tarantino',
             year: 1994,
             rating: 5
+            poster_url: 'http://placekitten.com/g/200/300'
           },
           {
             id: 3,
@@ -23,6 +25,7 @@ exports.seed = function (knex, Promise) {
             director: 'Dean DeBlois',
             year: 2010,
             rating: 5
+            poster_url: 'http://placekitten.com/g/200/300'
           },
           {
             id: 4,
@@ -30,6 +33,7 @@ exports.seed = function (knex, Promise) {
             director: 'Tony Leondis',
             year: 2017,
             rating: 3
+            poster_url: 'http://placekitten.com/g/200/300'
           },
           {
             id: 5,
@@ -37,6 +41,7 @@ exports.seed = function (knex, Promise) {
             director: 'Victor Rasuk',
             year: 2015,
             rating: 1
+            poster_url: 'http://placekitten.com/g/200/300'
           }
         ])
         .then(function () {
