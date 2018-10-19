@@ -8,7 +8,7 @@ exports.seed = function (knex, Promise) {
             title: 'The Shawshank Redemption',
             director: 'Frank Darabont',
             year: 1994,
-            rating: 5
+            rating: 5,
             poster_url: 'http://placekitten.com/g/200/300'
           },
           {
@@ -16,7 +16,7 @@ exports.seed = function (knex, Promise) {
             title: 'Pulp Fiction',
             director: 'Quentin Tarantino',
             year: 1994,
-            rating: 5
+            rating: 5,
             poster_url: 'http://placekitten.com/g/200/300'
           },
           {
@@ -24,7 +24,7 @@ exports.seed = function (knex, Promise) {
             title: 'How to Train Your Dragon',
             director: 'Dean DeBlois',
             year: 2010,
-            rating: 5
+            rating: 5,
             poster_url: 'http://placekitten.com/g/200/300'
           },
           {
@@ -32,7 +32,7 @@ exports.seed = function (knex, Promise) {
             title: 'Emoji Movie',
             director: 'Tony Leondis',
             year: 2017,
-            rating: 3
+            rating: 3,
             poster_url: 'http://placekitten.com/g/200/300'
           },
           {
@@ -40,7 +40,8 @@ exports.seed = function (knex, Promise) {
             title: '50 Shades of Grey',
             director: 'Victor Rasuk',
             year: 2015,
-            rating: 1
+            rating: 1,
+            ,
             poster_url: 'http://placekitten.com/g/200/300'
           }
         ])
