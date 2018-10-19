@@ -17,7 +17,7 @@ const isValidID = (req, res, next) => {
 }
 
 const validateRequestBody = (req, res, next) => {
-  if (!req.body.title || !req.body.director || !req.body.year || !req.body.rating) {
+  if (!req.body.title || !req.body.director || !req.body.year || !req.body.rating || !req.body.poster_url) {
     let err = new Error(`Not a Valid Request`)
     err.status = 400
     throw err
@@ -61,6 +61,7 @@ router.post('/', validateRequestBody, (req, res, next) => {
       director: req.body.director,
       year: req.body.year,
       rating: req.body.rating
+      poster_url: req.body.poster_url
     })
     .returning('*')
     .then((data) => {
@@ -84,6 +85,7 @@ router.put('/:id', isValidID, validateRequestBody, (req, res, next) => {
           director: req.body.director,
           year: req.body.year,
           rating: req.body.rating
+          poster_url: req.body.poster_url
         })
         .returning('*')
         .then((data) => {
