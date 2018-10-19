@@ -65,7 +65,7 @@ router.post('/', validateRequestBody, (req, res, next) => {
     })
     .returning('*')
     .then((data) => {
-      res.json(data[0])
+      res.json(data)
     })
     .catch((err) => {
       next(err)
