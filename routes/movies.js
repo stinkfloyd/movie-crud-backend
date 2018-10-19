@@ -21,6 +21,8 @@ const validateRequestBody = (req, res, next) => {
     let err = new Error(`Not a Valid Request`)
     err.status = 400
     throw err
+  } else {
+    next()
   }
 }
 
@@ -65,6 +67,7 @@ router.post('/', validateRequestBody, (req, res, next) => {
     })
     .returning('*')
     .then((data) => {
+      console.log('knex insert complete');
       res.json(data)
     })
     .catch((err) => {

@@ -1,0 +1,40 @@
+#titleDiv {
+  text-align: center;
+  background-color: darkGrey;
+  padding-bottom: 1em;
+}
+
+#title {
+  margin-bottom: auto;
+}
+
+#inputFormDiv {
+  display: none;
+  text-align: center;
+}
+
+#editFormDiv {
+  display: none;
+  text-align: center;
+}
+
+#tableDiv {
+  display: none;
+  text-align: center;
+}
+
+#newButton {
+  margin: 2em;
+}
+
+label {
+  width: 15em;
+  text-align: left;
+}
+input {
+  width: 15em;
+  text-align: center;
+}
+th {
+  text-align: center;
+}

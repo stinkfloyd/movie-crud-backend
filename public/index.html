@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="" id="titleDiv">
+    <div id="titleRow" class="row">
+      <h1 id="title">Nick's Never-Wrong Movie Review</h1>
+    </div>
+    <div class="row" id="buttonRow">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" id="homeButton">Home</button>
+        <button type="button" class="btn btn-secondary" id="moviesButton">Movies</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="tableDiv">
+    <button type="button" class="btn btn-primary" id="newButton">Add New</button>
+    <table id="movieTable" class="table table-striped table-bordered">
+      <thead class="thead-light">
+
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Director</th>
+          <th scope="col">Year</th>
+          <th scope="col">Rating</th>
+
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+
+  <div id="inputFormDiv">
+    <h1 id="addHeading"><small>Add a movie</small></h1>
+    <form id="inputForm">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" required><br>
+
+      <label for="director">Director</label>
+      <input type="text" name="director" id="director" required><br>
+
+      <label for="year">Year</label>
+      <input type="number" name="year" id="year" min=1888 required><br>
+
+      <label for="rating">Rating</label>
+      <input type="number" name="rating" id="rating" min=0 max=5 required><br>
+
+      <label for="posterUrl">Poster URL</label>
+      <input type="text" name="poster_url" id="posterUrl" required><br><br>
+
+      <input type="submit" value="Submit" id="submitForm">
+    </form>
+  </div>
+
+  <!-- Modal -->
+<div id="viewModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="modal-title"></h4>
+      </div>
+      <div class="modal-body" id="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <div id="editFormDiv">
+    <h1 id="editHeading"><small>Edit movie</small></h1>
+    <form id="editForm">
+
+      <label for="id">ID</label>
+      <input type="number" name="id" id="id" readonly><br>
+
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" required><br>
+
+      <label for="director">Director</label>
+      <input type="text" name="director" id="director" required><br>
+
+      <label for="year">Year</label>
+      <input type="number" name="year" id="year" min=1888 required><br>
+
+      <label for="rating">Rating</label>
+      <input type="number" name="rating" id="rating" min=0 max=5 required><br>
+
+      <label for="posterUrl">Poster URL</label>
+      <input type="text" name="poster_url" id="posterUrl" required><br><br>
+
+      <input type="submit" value="Submit" id="submitForm">
+    </form>
+  </div>
+
+  <div id="homeDiv">
+    Welcome to Nick's Never-Wrong Movie Review, where if you dont agree with the rating, we let you change it! WHAT COULD GO WRONG?!
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>
